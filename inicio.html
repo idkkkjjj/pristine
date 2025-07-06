@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Um</title>
+  <link rel="stylesheet" href="acerto.css">
+  <link rel="icon" href="icon2.png" type="image/png">
+  <style>
+    .imagem {
+      max-width: 250px;
+      position: relative;
+      top: -50px;
+    }
+    .texto {
+      position: relative;
+      top: -80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <input type="text" id="inputText" placeholder="Digite a senha" onkeydown="checarEnter(event)">
+    <div id="message" class="message"></div>
+  </div>
+  <div>
+    <img src="número.png" alt="Códigos?" class="imagem">
+    <div class="texto">
+      <p class="white">
+        978-3839189740
+      </p>
+      <p class="white">
+        978-1023005555
+      </p>
+      <p class="white">
+        978-8585091149
+      </p>
+      <p class="white">
+        978-8511131086
+      </p>
+      <p class="white">
+        978-6585313018
+      </p>
+      <p class="white">
+        979-8670097642
+      </p>
+      <p class="invisivel">
+        GA<span class="r">&#xE011;</span>AMANA.
+      </p>
+    </div>
+  </div>
+  <script>
+    const palavrasCorretas = ["musica"];
+    const siteCorreto = "https://idkkkjjj.github.io/nimbus/musica";
+
+    function checarEnter(event) {
+      if (event.key === "Enter") {
+        verificarPalavra();
+      }
+    }
+
+    function verificarPalavra() {
+      const input = document.getElementById("inputText").value;
+      const message = document.getElementById("message");
+      const palavraInput = removerAcentos(input.toLowerCase());
+
+      if (palavrasCorretas.includes(palavraInput)) {
+        window.location.href = siteCorreto;
+      } else {
+        message.textContent = "Errado.";
+        message.classList.add("show");
+        setTimeout(() => {
+          message.classList.remove("show");
+        }, 2000);
+      }
+    }
+
+    function removerAcentos(str) {
+      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Alice", serif;
+    font-size: x-large;
+}
+
+.dark_gray {
+    color: darkgray;
+}
+
+.gray {
+    color: gray;
+}
+
+.white {
+    color: lightgray;
+}
+
+.vermelho {
+    color: red;
+}
+.green {
+    color: green;
+}
+
+div {
+    text-align: center;
+}
+
+.button {
+    height: 30px;
+    width: auto;
+}
+
+.tradutor {
+    font-size: x-large;
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 0.5;
+}
+
+.ascii {
+    font-size: x-large;
+    color: rgba(255, 255, 255, 0.25);
+    opacity: 0.25;
+}
+.invisivel {
+    font-size: x-large;
+    color: rgba(255, 255, 255, 0.08);
+    opacity: 0.25;
+}
+img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.footer-text {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: large;
+}
+.input-container {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: 0.6em;
+}
+.input-container input {
+    padding: 5px;
+    font-size: 1em;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+}
+.message {
+    font-size: 1em;
+    color: red;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    visibility: 0s 1s;
+}
+.message.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+@font-face {
+    font-family: "Puzzle";
+    src: url("PuzzleRegular.otf") format("truetype");
+}
+.puzzle {
+    font-family: "Puzzle", serif;
+    font-size: 1.5em;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+}
+.r {
+    position: relative;
+    top: 5px;
+    left: -8.5px;
+    width: 15px;
+    font-family: "Puzzle", serif;
+    font-size: 1.5em;
+    display: inline-block;
+    text-align: center;
+}
+::selection {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
