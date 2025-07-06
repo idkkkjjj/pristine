@@ -1,1 +1,1 @@
-# [pristine](idkkkjjj.github.io/pristine/inicio)
+# [pristine](inicio)
