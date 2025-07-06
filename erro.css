@@ -1,20 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+
 body {
-    background-color: #800000;
+    background-color: #800;
     color: #f08080;
-    font-family: sans-serif;
     text-align: center;
     font-size: x-large;
 }
-a {
-    color: #f08080;
-}
 .body {
     font-size: x-large;
-}
-@font-face {
-    font-family: "Puzzle";
-    src: url("PuzzleRegular.otf") format("truetype");
-}
-.puzzle {
-    font-family: "Puzzle", serif;
 }
